@@ -1,0 +1,64 @@
+<html>
+
+<head>
+
+</head>
+
+<body onload="updateScreen()" style="background-color:black; font-family:'Courier New', Courier, monospace; color:white;">
+    <p id="t1">line 1</p>
+    <p id="t2">line 2</p>
+    <p id="t3">line 3</p>
+
+    <script>
+        var page = 0
+        var text1 = ["Welcome to this batch tutorial.", "First of all, you can use the echo command to print out words."]
+        var text2 = ["Despite the limited graphics, you can still make some interesting games with Batch.", "Example: echo Hi friends."]
+        var text3 = ["Press any key to continue...", "Press any key to continue..."]
+        function updateScreen () {
+            var b1 = text1[page];
+            var b2 = text2[page];
+            var b3 = text3[page];
+            document.getElementById("t1").innerHTML = b1;
+            document.getElementById("t2").innerHTML = b2;
+            document.getElementById("t3").innerHTML = b3;
+        }
+        document.addEventListener('keydown', function (event) {
+            page = page + 1;
+            updateScreen()
+        })
+        // var waitingForKey = false;
+        // function echo(message) { }
+        // function pause(message) {
+            // if (message == undefined) {
+                // document.getElementById("theText").innerHTML = "Press any key 2to continue..."
+                // function wait() {
+                    // waitingForKey = true;
+                    // function check() {
+                        // alert (waitingForKey)                        
+                        // if (waitingForKey = true) {
+                            // document.getElementById("theText").innerHTML = "push a key..."
+                            // setTimeout(check(), 10000)
+                        // } else {
+                            // document.getElementById("theText").innerHTML = "Continuing..."
+                        // }
+                    // }
+                    // check();
+                // }
+                // wait();
+            // } else {
+        //         document.getElementById("theText").innerHTML = message
+            // }
+        // }
+        // document.addEventListener('keydown', function (event) {
+            //alert(event.keyCode);
+            // waitingForKey = false;
+            // var whichKey = event.keyCode;
+        // });
+    //document.addEventListener('keyup', function(event){
+    //var keyPressed = false;
+    //});
+    </script>
+
+</body>
+
+</html>
